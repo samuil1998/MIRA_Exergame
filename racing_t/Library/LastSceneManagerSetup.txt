@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/scene/racing_t.unity
+  isLoaded: 1
+  isActive: 1
