@@ -1,13 +1,13 @@
-﻿ using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class carspawner : MonoBehaviour {
 
 	public GameObject[] cars;
-	int carNo;
+	private int carNo;
 	public float delaytimer = 1f;
-	float timer;
+	private float timer;
 
 	// Use this for initialization
 	void Start () {
@@ -21,10 +21,10 @@ public class carspawner : MonoBehaviour {
 		timer -= Time.deltaTime;
 		if (timer <= 0) 
 		{
-			Vector3 carPos = new Vector3 (Random.Range (-1.88f, 1.94f), transform.position.y, transform.position.z);
-			carNo = Random.Range (0, 4);
-			Instantiate (cars[carNo], carPos, transform.rotation);
-			timer = delaytimer;
+			Vector2 carPos = new Vector2 (Random.Range (-1.88f, 1.94f), transform.position.y); //get random position in the area above the camera
+            carNo = (int) Random.Range (0, 4); //get random car from the prefabs
+			Instantiate (cars[carNo], carPos, transform.rotation); //instantiate it with the random position
+			timer = delaytimer; //reset the timer
 		}
 			
 	}
