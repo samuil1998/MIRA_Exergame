@@ -58,6 +58,7 @@
      <Compile Include="Assets\scripts\DisplayScore.cs" />
      <Compile Include="Assets\scripts\EnemycarMove.cs" />
      <Compile Include="Assets\scripts\Enemydestroyer.cs" />
+     <Compile Include="Assets\scripts\Home.cs" />
      <Compile Include="Assets\scripts\trackmove.cs" />
  <Reference Include="UnityEngine.UIAutomation">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UIAutomation/UnityEngine.UIAutomation.dll</HintPath>
