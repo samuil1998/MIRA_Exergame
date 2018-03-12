@@ -12,7 +12,6 @@ public class carspawner : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		timer = delaytimer;
-		
 	}
 	
 	// Update is called once per frame
@@ -21,11 +20,10 @@ public class carspawner : MonoBehaviour {
 		timer -= Time.deltaTime;
 		if (timer <= 0) 
 		{
-			Vector2 carPos = new Vector2 (Random.Range (-1.88f, 1.94f), transform.position.y); //get random position in the area above the camera
+			Vector2 carPos = new Vector2 (Random.Range (0f, 1.94f), transform.position.y); //get random position in the area above the camera
             carNo = (int) Random.Range (0, 4); //get random car from the prefabs
 			Instantiate (cars[carNo], carPos, transform.rotation); //instantiate it with the random position
 			timer = delaytimer; //reset the timer
 		}
-			
 	}
 }

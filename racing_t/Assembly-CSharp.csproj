@@ -52,11 +52,13 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\scripts\car_controller.cs" />
+     <Compile Include="Assets\scripts\car_spawner_left.cs" />
      <Compile Include="Assets\scripts\carspawner.cs" />
      <Compile Include="Assets\scripts\coinSpawner.cs" />
      <Compile Include="Assets\scripts\creatingcoins.cs" />
      <Compile Include="Assets\scripts\DisplayScore.cs" />
      <Compile Include="Assets\scripts\EnemycarMove.cs" />
+     <Compile Include="Assets\scripts\EnemyCarMove_left.cs" />
      <Compile Include="Assets\scripts\Enemydestroyer.cs" />
      <Compile Include="Assets\scripts\pauseScript.cs" />
      <Compile Include="Assets\scripts\trackmove.cs" />
