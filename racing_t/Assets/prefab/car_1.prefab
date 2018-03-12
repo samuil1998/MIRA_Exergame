@@ -20,8 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4114357949020574}
   - component: {fileID: 212302265526578174}
-  - component: {fileID: 114197394398545702}
   - component: {fileID: 61153820601974162}
+  - component: {fileID: 114162214463775874}
   m_Layer: 0
   m_Name: car_1
   m_TagString: Enemycar
@@ -67,7 +67,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.58, y: 3.19}
   m_EdgeRadius: 0
---- !u!114 &114197394398545702
+--- !u!114 &114162214463775874
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -75,7 +75,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1784517570755726}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ee85c5bb42cc4762a53ceb2c319e915, type: 3}
+  m_Script: {fileID: 11500000, guid: 964a937822d1f4340ba630316cf19585, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -2

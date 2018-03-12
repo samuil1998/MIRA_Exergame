@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemycarMove : MonoBehaviour 
 {
 
-	public float speed = 5f;
+	public float speed ;
 
 	// Use this for initialization
 	void Start () 
