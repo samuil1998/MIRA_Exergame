@@ -26,14 +26,14 @@ public class UImanager : MonoBehaviour
 		SceneManager.LoadScene (3);
 	}
 
-//	public void Medium()
-//	{
-//		SceneManager.LoadScene (1);
-//	}
+	public void Medium()
+	{
+		SceneManager.LoadScene (4);
+	}
 
 	public void Hard()
 	{
-		SceneManager.LoadScene (4);
+		SceneManager.LoadScene (5);
 	}
 
 }

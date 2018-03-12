@@ -8,6 +8,8 @@ TagManager:
   - coin
   - Undefined
   - PointsDisplayer
+  - red_coin
+  - black_coin
   layers:
   - Default
   - TransparentFX

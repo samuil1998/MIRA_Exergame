@@ -36,6 +36,7 @@ public class car_controller : MonoBehaviour {
 		if (col.gameObject.tag == "Enemycar") {
 			Destroy (col.gameObject);
 			StartCoroutine (Crash ());
+			score = score - 5;
 		} 
 		else if (col.gameObject.tag == "coin") 
 		{
@@ -45,6 +46,32 @@ public class car_controller : MonoBehaviour {
             DisplayScore displayer = controller.GetComponent<DisplayScore>();
             displayer.updateScore(score);
 
+		}
+		else if (col.gameObject.tag == "red_coin") 
+		{
+			Destroy (col.gameObject);
+			collision = false;
+			score = score + 10;
+			DisplayScore displayer = controller.GetComponent<DisplayScore>();
+			displayer.updateScore(score);
+		}
+		else if (col.gameObject.tag == "black_coin") 
+		{
+			if (score < 0) // ONLY if the score is >0 then the score gets reset.
+			{
+				Destroy (col.gameObject);
+				collision = false;
+				DisplayScore displayer = controller.GetComponent<DisplayScore> ();
+				displayer.updateScore (score);
+			}
+			else 
+			{
+				Destroy (col.gameObject);
+				collision = false;
+				DisplayScore displayer = controller.GetComponent<DisplayScore> ();
+				score = 0; // score is reset when hits black coin.
+				displayer.updateScore (score);
+			}
 		}
     }
 

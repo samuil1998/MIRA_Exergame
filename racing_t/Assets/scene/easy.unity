@@ -235,6 +235,46 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 88736899}
+--- !u!1 &89286924
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 89286926}
+  - component: {fileID: 89286925}
+  m_Layer: 0
+  m_Name: red_coinSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &89286925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 89286924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d224a136a633409f8a34fd7fb4b7f46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &89286926
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 89286924}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &157834099
 GameObject:
   m_ObjectHideFlags: 0
@@ -1252,6 +1292,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1234591818}
   - component: {fileID: 1234591817}
+  - component: {fileID: 1234591819}
   m_Layer: 0
   m_Name: coinSpawnerPostition
   m_TagString: Untagged
@@ -1285,6 +1326,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
+--- !u!114 &1234591819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1234591816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e7f5862c30f44343a8fc594fd6543cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coin: {fileID: 0}
+  delaytimer: 8
 --- !u!1 &1309583199
 GameObject:
   m_ObjectHideFlags: 0
@@ -1834,7 +1888,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2011433338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1851,7 +1905,7 @@ MonoBehaviour:
   - {fileID: 1494127652428868, guid: 0d7d7f4e07754457cbb4c2780def1e6d, type: 2}
   - {fileID: 1776582983170028, guid: caae00c1ae5424599b8a7b5bbe9a9345, type: 2}
   - {fileID: 1837580493291044, guid: d20e2dec2ce36492daab3f1533ee3086, type: 2}
-  delaytimer: 1
+  delaytimer: 3
 --- !u!4 &2011433339
 Transform:
   m_ObjectHideFlags: 0

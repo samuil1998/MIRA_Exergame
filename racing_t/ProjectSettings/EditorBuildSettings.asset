@@ -18,5 +18,8 @@ EditorBuildSettings:
     path: Assets/scene/easy.unity
     guid: cf1f46bc20a224f668bce4a781082b6f
   - enabled: 1
-    path: Assets/scene/hard.unity
+    path: Assets/scene/medium.unity
     guid: 81b7076c5eb344cdf8ec885174c7c732
+  - enabled: 1
+    path: Assets/scene/hard.unity
+    guid: f2afa0dcfacb84f018af02abd386b5e6
