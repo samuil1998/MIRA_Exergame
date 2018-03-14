@@ -6,7 +6,6 @@ public class SetDifficulty : MonoBehaviour {
 
     GameObject shared;
     ShareVariables sv;
-
     // Use this for initialization
     void Start () {
         shared = GameObject.FindGameObjectWithTag("SharedVariables");
@@ -24,17 +23,8 @@ public class SetDifficulty : MonoBehaviour {
         {
             sv.setPause(false);
         }
-        else
-        {
-            sv.setPause(true);
-            sv.setCountdown(true);
-        }
-        Debug.Log(sv.getPause() + "Pause | Countdown " + sv.getCountdown());
 
         SceneManager.LoadScene("Easy");
-
-
-
     }
     public void SetMedium()
     {

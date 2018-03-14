@@ -15,7 +15,7 @@ public class Enemydestroyer : MonoBehaviour {
 	}
 	void OnCollisionEnter2D (Collision2D col)
 	{
-        if (col.gameObject.tag == "Enemycar" || col.gameObject.tag == "coin" || col.gameObject.tag == "Tree") 
+		if (col.gameObject.tag == "Enemycar" || col.gameObject.tag == "coin" || col.gameObject.tag == "Tree" || col.gameObject.tag == "red_coin" ) 
 		{
 			Destroy (col.gameObject);
 		}

@@ -36,8 +36,15 @@ public class HandleCollision : MonoBehaviour {
 
             fm.setCollision(false);
 
+			if (score > 5) {
+				score = score - 5;
+			} else if (score > 0 && score < 5) {
+				score = 0;
+			}
+			Debug.Log(score);
 
-
+			DisplayScore displayer = controller.GetComponent<DisplayScore>();
+			displayer.updateScore(score);
         } 
         else if (col.gameObject.tag == "coin") 
         {
@@ -52,6 +59,20 @@ public class HandleCollision : MonoBehaviour {
 
 
         }
+
+		else if (col.gameObject.tag == "red_coin") 
+		{
+			Destroy (col.gameObject);
+
+			score = score + 10;
+			Debug.Log(score);
+
+			DisplayScore displayer = controller.GetComponent<DisplayScore>();
+			displayer.updateScore(score);
+
+
+
+		}
 
         else if (col.gameObject.tag == "Tree") 
         {

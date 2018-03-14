@@ -5,7 +5,6 @@ using UnityEngine;
 public class ShareVariables : MonoBehaviour {
     private bool pause = false;
     private bool obstacles = true;
-    private bool countdown = true;
 
     void Awake()
     {
@@ -19,15 +18,7 @@ public class ShareVariables : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	}
-    public bool getCountdown()
-    {
-        return countdown;
-    }
 
-    public void setCountdown(bool b)
-    {
-        countdown = b;
-    }
     public bool getPause()
     {
         return pause;
