@@ -1115,7 +1115,7 @@ MonoBehaviour:
   - {fileID: 1494127652428868, guid: 0d7d7f4e07754457cbb4c2780def1e6d, type: 2}
   - {fileID: 1776582983170028, guid: caae00c1ae5424599b8a7b5bbe9a9345, type: 2}
   - {fileID: 1837580493291044, guid: d20e2dec2ce36492daab3f1533ee3086, type: 2}
-  delaytimer: 1
+  delaytimer: 0.5
 --- !u!4 &2011433339
 Transform:
   m_ObjectHideFlags: 0

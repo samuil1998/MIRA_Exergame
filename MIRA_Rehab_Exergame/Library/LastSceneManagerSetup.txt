@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/scene/userinterface.unity
+- path: Assets/scene/PauseSettings.unity
   isLoaded: 1
   isActive: 1
