@@ -812,7 +812,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e7f5862c30f44343a8fc594fd6543cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coin: {fileID: 1728922736071392, guid: 825df3f36125746758e6dc2114260713, type: 2}
+  coin: {fileID: 1629117730309326, guid: 2488974d411304143af7fd0894ec4a61, type: 2}
   delaytimer: 1
 --- !u!4 &1234591818
 Transform:
