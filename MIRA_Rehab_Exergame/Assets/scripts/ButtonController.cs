@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 public class ButtonController : MonoBehaviour {
 
     GameObject shared;
@@ -37,12 +38,18 @@ public class ButtonController : MonoBehaviour {
     {
         SceneManager.LoadScene("Pause", LoadSceneMode.Additive);
         sv.setPause(true);
+        GameObject obj = GameObject.FindGameObjectWithTag("PauseButton");
+        Debug.Log("so far so good");
+        obj.GetComponent<Image>().enabled = false;
     }
 
     public void ResumeGame()
     {
         sv.setPause(false);
         SceneManager.UnloadScene("Pause");
+        GameObject obj = GameObject.FindGameObjectWithTag("PauseButton");
+        Debug.Log("so far so good");
+        obj.GetComponent<Image>().enabled = true;
     }
 
     public void turnObstacles()

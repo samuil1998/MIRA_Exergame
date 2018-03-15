@@ -29,6 +29,7 @@ public class ShareVariables : MonoBehaviour {
         pause = b;
     }
 
+
     public bool getObstacles()
     {
         return obstacles;

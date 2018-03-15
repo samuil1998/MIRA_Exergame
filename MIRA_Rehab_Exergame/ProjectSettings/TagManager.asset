@@ -12,6 +12,7 @@ TagManager:
   - Car
   - SharedVariables
   - red_coin
+  - PauseButton
   layers:
   - Default
   - TransparentFX
