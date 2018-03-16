@@ -271,6 +271,7 @@ GameObject:
   - component: {fileID: 345804980}
   - component: {fileID: 345804979}
   - component: {fileID: 345804981}
+  - component: {fileID: 345804982}
   m_Layer: 0
   m_Name: GameController
   m_TagString: GameController
@@ -313,6 +314,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed5904539c0004bbf8ceb279c826bfcf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &345804982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 345804978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bb99a3fe21be42d2b71ea6db709cdc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boostSpeed: 12
 --- !u!1 &444781951
 GameObject:
   m_ObjectHideFlags: 0
@@ -324,7 +337,7 @@ GameObject:
   - component: {fileID: 444781952}
   m_Layer: 5
   m_Name: TreeSpawner
-  m_TagString: Untagged
+  m_TagString: TreeSpawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -344,6 +357,7 @@ MonoBehaviour:
   - {fileID: 1226648117915590, guid: e0afd2f17b092422986a50b80acbe8ac, type: 2}
   - {fileID: 1823128467006972, guid: 4d46c91476ead4328968c7691aa047fb, type: 2}
   delaytimer: 0.6
+  treeSpeed: 5.5
 --- !u!4 &444781953
 Transform:
   m_ObjectHideFlags: 0
@@ -371,7 +385,7 @@ GameObject:
   - component: {fileID: 492624549}
   m_Layer: 0
   m_Name: track
-  m_TagString: Untagged
+  m_TagString: Track
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1108,7 +1122,7 @@ GameObject:
   - component: {fileID: 2011433338}
   m_Layer: 4
   m_Name: CarSpawnPosition
-  m_TagString: Untagged
+  m_TagString: CarSpawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

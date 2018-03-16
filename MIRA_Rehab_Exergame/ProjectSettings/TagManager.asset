@@ -13,6 +13,9 @@ TagManager:
   - SharedVariables
   - red_coin
   - PauseButton
+  - Track
+  - TreeSpawner
+  - CarSpawner
   layers:
   - Default
   - TransparentFX

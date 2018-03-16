@@ -14,6 +14,8 @@ public class TreeSpawner : MonoBehaviour {
     ShareVariables sv;
     bool pause = false;
 
+    public float treeSpeed = 5.5f;
+
     // Use this for initialization
     void Start () {
         timer = delaytimer;
@@ -24,6 +26,11 @@ public class TreeSpawner : MonoBehaviour {
 
         shared = GameObject.FindGameObjectWithTag("SharedVariables");
         sv = shared.GetComponent<ShareVariables>();
+
+        foreach (GameObject tree in trees)
+        {
+            tree.GetComponent<EnemycarMove>().speed = treeSpeed;
+        }
 
     }
 
@@ -48,5 +55,13 @@ public class TreeSpawner : MonoBehaviour {
             }
         }
 
+    }
+
+    public void UpdateSpeed(float newSpeed)
+    {
+        foreach (GameObject tree in trees)
+        {
+            tree.GetComponent<EnemycarMove>().speed = newSpeed;
+        }
     }
 }

@@ -12,6 +12,7 @@ public class carspawner : MonoBehaviour {
 	private float timer;
     bool pause = false;
     bool obstacles = true;
+    bool boostMode = false;
     GameObject shared;
     ShareVariables sv;
 
@@ -33,7 +34,7 @@ public class carspawner : MonoBehaviour {
 	void Update () {
         pause = sv.getPause();
         obstacles = sv.getObstacles();
-        if (pause == false && obstacles == true)
+        if (pause == false && obstacles == true && boostMode == false)
         {
             timer -= Time.deltaTime;
             if (timer <= 0)
@@ -47,4 +48,9 @@ public class carspawner : MonoBehaviour {
         }
 			
 	}
+
+    public void SetBoost(bool b)
+    {
+        boostMode = b;
+    }
 }
