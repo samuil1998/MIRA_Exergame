@@ -22,7 +22,6 @@ public class carspawner : MonoBehaviour {
         cam = Camera.main;
         cameraHeight = 2f * cam.orthographicSize;
         cameraWidth = cameraHeight * cam.aspect;
-        Debug.Log(cameraWidth);
 
         shared = GameObject.FindGameObjectWithTag("SharedVariables");
         sv = shared.GetComponent<ShareVariables>();

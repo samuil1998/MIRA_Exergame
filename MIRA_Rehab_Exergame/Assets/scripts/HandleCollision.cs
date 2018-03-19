@@ -28,7 +28,6 @@ public class HandleCollision : MonoBehaviour {
     void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.tag == "Enemycar") {
-            Debug.Log("Hit an enemy car.");
             Destroy (col.gameObject);
 
             fm.setCollision(true);
@@ -41,7 +40,6 @@ public class HandleCollision : MonoBehaviour {
 			} else if (score > 0 && score < 5) {
 				score = 0;
 			}
-			Debug.Log(score);
 
 			DisplayScore displayer = controller.GetComponent<DisplayScore>();
 			displayer.updateScore(score);
@@ -51,7 +49,6 @@ public class HandleCollision : MonoBehaviour {
             Destroy (col.gameObject);
 
             score++;
-            Debug.Log(score);
 
             DisplayScore displayer = controller.GetComponent<DisplayScore>();
             displayer.updateScore(score);
@@ -65,7 +62,6 @@ public class HandleCollision : MonoBehaviour {
 			Destroy (col.gameObject);
 
 			score = score + 10;
-			Debug.Log(score);
 
 			DisplayScore displayer = controller.GetComponent<DisplayScore>();
 			displayer.updateScore(score);
@@ -74,14 +70,20 @@ public class HandleCollision : MonoBehaviour {
 
 		}
 
-        else if (col.gameObject.tag == "Tree") 
+        else if (col.gameObject.tag == "Fuel") 
         {
-            
-           // Physics.IgnoreCollision(col.GetComponent<Collider>(), GetComponent<Collider>()); 
-
-
-
+            controller.GetComponent<Boost>().ActivateBoost();
+            Destroy (col.gameObject);
         }
+
+        //else if (col.gameObject.tag == "Tree") 
+        //{
+            
+        //   // Physics.IgnoreCollision(col.GetComponent<Collider>(), GetComponent<Collider>()); 
+
+
+
+       // }
         
     }
 

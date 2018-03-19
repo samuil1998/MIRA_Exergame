@@ -16,6 +16,7 @@ TagManager:
   - Track
   - TreeSpawner
   - CarSpawner
+  - Fuel
   layers:
   - Default
   - TransparentFX
