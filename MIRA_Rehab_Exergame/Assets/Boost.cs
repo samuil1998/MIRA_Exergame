@@ -19,7 +19,10 @@ public class Boost : MonoBehaviour {
         track = GameObject.FindGameObjectWithTag("Track");
         tspawner = GameObject.FindGameObjectWithTag("TreeSpawner");
         cspawner = GameObject.FindGameObjectWithTag("CarSpawner");
+        Debug.Log("111111");
         treeSpawner = tspawner.GetComponent<TreeSpawner>();
+        Debug.Log("222222");
+
         carSpawner = cspawner.GetComponent<carspawner>();
     }
 

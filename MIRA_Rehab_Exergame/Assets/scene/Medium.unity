@@ -113,6 +113,48 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &125768825
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 125768826}
+  - component: {fileID: 125768827}
+  m_Layer: 0
+  m_Name: FuelSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &125768826
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 125768825}
+  m_LocalRotation: {x: -0, y: -0, z: 1, w: 0}
+  m_LocalPosition: {x: 0.19845647, y: 4.386169, z: -4.8815904}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 662929125}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
+--- !u!114 &125768827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 125768825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e7f5862c30f44343a8fc594fd6543cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coin: {fileID: 1995264485519000, guid: 136eaa646e1084631b3b4b41b0381012, type: 2}
+  delaytimer: 5
 --- !u!1 &278605264
 GameObject:
   m_ObjectHideFlags: 0
@@ -271,6 +313,7 @@ GameObject:
   - component: {fileID: 345804980}
   - component: {fileID: 345804979}
   - component: {fileID: 345804981}
+  - component: {fileID: 345804982}
   m_Layer: 0
   m_Name: GameController
   m_TagString: GameController
@@ -313,6 +356,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed5904539c0004bbf8ceb279c826bfcf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &345804982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 345804978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bb99a3fe21be42d2b71ea6db709cdc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boostSpeed: 12
+  boostTime: 3
 --- !u!1 &444781951
 GameObject:
   m_ObjectHideFlags: 0
@@ -324,7 +380,7 @@ GameObject:
   - component: {fileID: 444781952}
   m_Layer: 5
   m_Name: TreeSpawner
-  m_TagString: Untagged
+  m_TagString: TreeSpawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -372,7 +428,7 @@ GameObject:
   - component: {fileID: 492624549}
   m_Layer: 0
   m_Name: Track
-  m_TagString: Untagged
+  m_TagString: Track
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -566,6 +622,7 @@ Transform:
   - {fileID: 444781953}
   - {fileID: 1234591818}
   - {fileID: 2011433339}
+  - {fileID: 125768826}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -870,7 +927,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e7f5862c30f44343a8fc594fd6543cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coin: {fileID: 1530445715609548, guid: a9d1efe4ebd6c4ac2bbc6da04c0599e0, type: 2}
+  coin: {fileID: 1537397984086456, guid: 371e4ef55d82549b5a80d9ee6b14589a, type: 2}
   delaytimer: 10
 --- !u!1 &1431318048
 GameObject:
@@ -1140,7 +1197,7 @@ GameObject:
   - component: {fileID: 2011433338}
   m_Layer: 4
   m_Name: CarSpawner
-  m_TagString: Untagged
+  m_TagString: CarSpawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

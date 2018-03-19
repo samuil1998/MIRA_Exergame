@@ -72,6 +72,7 @@ public class HandleCollision : MonoBehaviour {
 
         else if (col.gameObject.tag == "Fuel") 
         {
+            Debug.Log("in collision");
             controller.GetComponent<Boost>().ActivateBoost();
             Destroy (col.gameObject);
         }
