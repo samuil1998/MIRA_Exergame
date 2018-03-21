@@ -10,7 +10,10 @@ public class Boost : MonoBehaviour {
     private GameObject cspawner;
     private TreeSpawner treeSpawner;
     private carspawner carSpawner;
+    private GameObject coinSpawnerObject;
+    private coinSpawner cs; 
     public float boostSpeed = 12;
+    private float oldCoinsDelay;
 
     public float boostTime = 3.0f;
 
@@ -19,11 +22,12 @@ public class Boost : MonoBehaviour {
         track = GameObject.FindGameObjectWithTag("Track");
         tspawner = GameObject.FindGameObjectWithTag("TreeSpawner");
         cspawner = GameObject.FindGameObjectWithTag("CarSpawner");
-        Debug.Log("111111");
+        coinSpawnerObject = GameObject.FindGameObjectWithTag("CoinSpawner");
+       
         treeSpawner = tspawner.GetComponent<TreeSpawner>();
-        Debug.Log("222222");
-
+        cs = coinSpawnerObject.GetComponent<coinSpawner>();
         carSpawner = cspawner.GetComponent<carspawner>();
+
     }
 
     // Update is called once per frame
@@ -55,13 +59,18 @@ public class Boost : MonoBehaviour {
         //accelerate existing trees
         for (int i = 0; i < trees.Length; i++)
         {
-            trees[i].GetComponent<EnemycarMove>().speed = boostSpeed;
+            if (trees[i] != null)
+            {
+                trees[i].GetComponent<EnemycarMove>().speed = boostSpeed;
+            }
         }
 
         //accelerate future prefabs by accessing the TreeSpawner
         treeSpawner.UpdateSpeed(boostSpeed);
         //and make the spawner spawn them more often to compensate for the high speed
         treeSpawner.delaytimer = 0.3f;
+        oldCoinsDelay = cs.delaytimer;
+        cs.delaytimer = 0.25f;
 
         //set the boost mode in carspawner to true to stop spawning cars 
         carSpawner.SetBoost(true);
@@ -89,6 +98,8 @@ public class Boost : MonoBehaviour {
             treeSpawner.delaytimer = 0.6f;
             //turn boost mode off to allow enemy cars being spawned again
             carSpawner.SetBoost(false);
+
+        cs.delaytimer = oldCoinsDelay;
 
     }
 }

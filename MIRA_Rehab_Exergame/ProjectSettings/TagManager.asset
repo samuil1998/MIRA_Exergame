@@ -17,6 +17,7 @@ TagManager:
   - TreeSpawner
   - CarSpawner
   - Fuel
+  - CoinSpawner
   layers:
   - Default
   - TransparentFX

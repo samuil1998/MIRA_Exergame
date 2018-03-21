@@ -26,7 +26,7 @@ public class coinSpawner : MonoBehaviour {
             timer -= Time.deltaTime;
             if (timer <= 0)
             {
-                Vector2 coinPos = new Vector2(Random.Range(-1.95f, 2.0f), transform.position.y);
+                Vector2 coinPos = new Vector2(Random.Range(-6.5f, 6.9f), transform.position.y);
                 Instantiate(coin, coinPos, transform.rotation);
                 timer = delaytimer;
             }

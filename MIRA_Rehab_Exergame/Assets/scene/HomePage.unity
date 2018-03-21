@@ -467,7 +467,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: EXER CAR GAME
+  m_Text: coin grabber
 --- !u!222 &319953932
 CanvasRenderer:
   m_ObjectHideFlags: 0
