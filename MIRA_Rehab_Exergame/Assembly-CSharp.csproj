@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Boost.cs" />
+     <Compile Include="Assets\CountDown.cs" />
      <Compile Include="Assets\scripts\AutoDestroy.cs" />
      <Compile Include="Assets\scripts\ButtonController.cs" />
      <Compile Include="Assets\scripts\carspawner.cs" />

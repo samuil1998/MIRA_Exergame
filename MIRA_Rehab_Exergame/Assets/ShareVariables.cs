@@ -45,5 +45,4 @@ public class ShareVariables : MonoBehaviour {
         obstacles = !obstacles;
         //switch to the other state
     }
-
 }

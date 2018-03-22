@@ -18,6 +18,11 @@ TagManager:
   - CarSpawner
   - Fuel
   - CoinSpawner
+  - TyreSpawner
+  - Tyre
+  - Countdown
+  - Spawners
+  - FuelSpawner
   layers:
   - Default
   - TransparentFX

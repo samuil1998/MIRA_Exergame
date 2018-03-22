@@ -19,6 +19,7 @@ public class DisplayScore : MonoBehaviour {
     public void updateScore(int score)
     {
         Text scoreDisplay = displayer.GetComponent<Text>();
+         
         scoreDisplay.text = "SCORE: " + score;
     }
 }
