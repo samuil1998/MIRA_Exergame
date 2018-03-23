@@ -70,6 +70,7 @@
      <Compile Include="Assets\scripts\UIManager.cs" />
      <Compile Include="Assets\SetDifficulty.cs" />
      <Compile Include="Assets\ShareVariables.cs" />
+     <Compile Include="Assets\SpawnSnowflakes.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />

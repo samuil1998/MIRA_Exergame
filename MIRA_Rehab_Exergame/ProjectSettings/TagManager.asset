@@ -23,6 +23,8 @@ TagManager:
   - Countdown
   - Spawners
   - FuelSpawner
+  - SnowflakeSpawner
+  - Snowflake
   layers:
   - Default
   - TransparentFX

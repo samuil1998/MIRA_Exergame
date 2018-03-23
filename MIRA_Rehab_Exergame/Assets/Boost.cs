@@ -24,7 +24,10 @@ public class Boost : MonoBehaviour {
         cspawner = GameObject.FindGameObjectWithTag("CarSpawner");
         coinSpawnerObject = GameObject.FindGameObjectWithTag("CoinSpawner");
        
-        treeSpawner = tspawner.GetComponent<TreeSpawner>();
+        if (tspawner != null)
+        {
+            treeSpawner = tspawner.GetComponent<TreeSpawner>();
+        }
         cs = coinSpawnerObject.GetComponent<coinSpawner>();
         carSpawner = cspawner.GetComponent<carspawner>();
 
@@ -65,10 +68,13 @@ public class Boost : MonoBehaviour {
             }
         }
 
-        //accelerate future prefabs by accessing the TreeSpawner
-        treeSpawner.UpdateSpeed(boostSpeed);
-        //and make the spawner spawn them more often to compensate for the high speed
-        treeSpawner.delaytimer = 0.3f;
+        //accelerate future prefabs by accessing the TreeSpawner (only if there is a treeSpawner - not all levels have)
+        if (treeSpawner != null)
+        {
+            treeSpawner.UpdateSpeed(boostSpeed);
+            //and make the spawner spawn them more often to compensate for the high speed
+            treeSpawner.delaytimer = 0.3f;
+        }
         oldCoinsDelay = cs.delaytimer;
         cs.delaytimer = 0.25f;
 
@@ -83,19 +89,23 @@ public class Boost : MonoBehaviour {
         trees = GameObject.FindGameObjectsWithTag("Tree");
 
         //escape boost 
-            Debug.Log("Cancelling boost");
+        Debug.Log("Cancelling boost");
 
             //get the track speed back to normal
-            move = track.GetComponent<trackmove>();
-            move.speed = 0.5f;
+        move = track.GetComponent<trackmove>();
+        move.speed = 0.5f;
             //current trees back to normal
-            for (int i = 0; i < trees.Length; i++)
-            {
-                trees[i].GetComponent<EnemycarMove>().speed = 5.5f;
-            }
+        for (int i = 0; i < trees.Length; i++)
+        {
+            trees[i].GetComponent<EnemycarMove>().speed = 5.5f;
+        }
             //and newly spawned trees too
+            
+        if (treeSpawner != null)
+        {
             treeSpawner.UpdateSpeed(5.5f);
             treeSpawner.delaytimer = 0.6f;
+        }
             //turn boost mode off to allow enemy cars being spawned again
             carSpawner.SetBoost(false);
 
