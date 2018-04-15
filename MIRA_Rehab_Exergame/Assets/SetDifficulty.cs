@@ -4,12 +4,16 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class SetDifficulty : MonoBehaviour {
 
+    GameObject inst;
+
     GameObject shared;
     ShareVariables sv;
     // Use this for initialization
     void Start () {
         shared = GameObject.FindGameObjectWithTag("SharedVariables");
         sv = shared.GetComponent<ShareVariables>();
+        inst = GameObject.FindGameObjectWithTag("Instructions");
+        inst.SetActive(false);
     }
 
     // Update is called once per frame
@@ -24,8 +28,10 @@ public class SetDifficulty : MonoBehaviour {
             sv.setPause(false);
         }
 
-        SceneManager.LoadScene("Easy");
-        sv.difficulty = "easy";
+        GameObject.FindGameObjectWithTag("Options").SetActive(false);
+
+        inst.SetActive(true);
+        StartCoroutine(StartLevel("Easy"));
     }
     public void SetMedium()
     {
@@ -33,8 +39,11 @@ public class SetDifficulty : MonoBehaviour {
         {
             sv.setPause(false);
         }
-        SceneManager.LoadScene("Medium");
-        sv.difficulty = "medium";
+
+        GameObject.FindGameObjectWithTag("Options").SetActive(false);
+
+        inst.SetActive(true);
+        StartCoroutine(StartLevel("Medium"));
     }
     public void SetHard()
     {
@@ -42,7 +51,17 @@ public class SetDifficulty : MonoBehaviour {
         {
             sv.setPause(false);
         }
-        SceneManager.LoadScene("Hard");
-        sv.difficulty = "hard";
+
+        GameObject.FindGameObjectWithTag("Options").SetActive(false);
+
+        inst.SetActive(true);
+        StartCoroutine(StartLevel("Hard"));
+    }
+
+    IEnumerator StartLevel(string level)
+    {
+        yield return new WaitForSeconds(4.5f);
+        SceneManager.LoadScene(level);
+        sv.difficulty = level;
     }
 }

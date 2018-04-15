@@ -30,17 +30,17 @@ public class Displayer : MonoBehaviour {
         {
             feedback = "You could do better!\n";
         }
-        else if (result < 20)
+        else if (result < 30)
         {
             feedback = "Not bad!\n";
         }
-        else if (result > 40)
+        else if (result < 60)
         {
-            feedback = "Amazing!\n";
+            feedback = "Well done!\n";
         }
         else
         {
-            feedback = "Well done!\n";
+            feedback = "Amazing!\n";
         }
 
         yield return new WaitForSeconds(0.7f);
@@ -48,11 +48,33 @@ public class Displayer : MonoBehaviour {
         yield return new WaitForSeconds(0.7f);
 
         int show = 0;
-        while (show <= result)
+        if (result < 50)
         {
-            scoreDisplay.text = feedback + "Score: " + show;
-            yield return new WaitForSeconds(0.1f);
-            show++;
+            while (show <= result)
+            {
+                scoreDisplay.text = feedback + "Score: " + show;
+                yield return new WaitForSeconds(0.08f);
+                show++;
+            }
+        }
+        //so that the user doesn't wait too much for the points to display
+        else if (result < 200)
+        {
+            while (show <= result)
+            {
+                scoreDisplay.text = feedback + "Score: " + show;
+                yield return new WaitForSeconds(0.03f);
+                show++;
+            }
+        }
+        else
+        {
+            while (show <= result)
+            {
+                scoreDisplay.text = feedback + "Score: " + show;
+                yield return new WaitForSeconds(0.01f);
+                show++;
+            }
         }
 
         yield return new WaitForSeconds(0.7f);

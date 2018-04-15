@@ -9,6 +9,7 @@ public class DisplayScore : MonoBehaviour {
     void Start () {
         displayer = GameObject.FindGameObjectWithTag("PointsDisplayer");
         updateScore(0);
+        GameObject.FindGameObjectWithTag("BoostTime").GetComponent<Text>().text = "";
     }
 
     // Update is called once per frame

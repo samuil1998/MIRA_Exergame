@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Boost : MonoBehaviour {
     private GameObject[] enemies;
@@ -48,6 +49,8 @@ public class Boost : MonoBehaviour {
 
     public void ActivateBoost()
     {
+        GameObject.FindGameObjectWithTag("BoostTime").GetComponent<Text>().text = "Boost Time!";
+
         StartCoroutine(BoostCoroutine());
     }
 
@@ -124,6 +127,9 @@ public class Boost : MonoBehaviour {
             carSpawner.SetBoost(false);
 
         cs.delaytimer = oldCoinsDelay;
+
+        GameObject.FindGameObjectWithTag("BoostTime").GetComponent<Text>().text = "";
+
 
     }
 }
