@@ -25,6 +25,7 @@ public class SetDifficulty : MonoBehaviour {
         }
 
         SceneManager.LoadScene("Easy");
+        sv.difficulty = "easy";
     }
     public void SetMedium()
     {
@@ -33,6 +34,7 @@ public class SetDifficulty : MonoBehaviour {
             sv.setPause(false);
         }
         SceneManager.LoadScene("Medium");
+        sv.difficulty = "medium";
     }
     public void SetHard()
     {
@@ -41,5 +43,6 @@ public class SetDifficulty : MonoBehaviour {
             sv.setPause(false);
         }
         SceneManager.LoadScene("Hard");
+        sv.difficulty = "hard";
     }
 }

@@ -9,10 +9,7 @@ EditorBuildSettings:
     path: Assets/scene/HomePage.unity
     guid: 269837ea10c8b43e0bd69c676bbbe750
   - enabled: 1
-    path: Assets/scene/Difficulty.unity
-    guid: 1de603207026940e692a6398bff2b33b
-  - enabled: 1
-    path: Assets/scene/Settings.unity
+    path: Assets/scene/Feedback.unity
     guid: 130e7d3e06aac4806ae31d06c7b7c177
   - enabled: 1
     path: Assets/scene/Easy.unity
@@ -27,5 +24,8 @@ EditorBuildSettings:
     path: Assets/scene/Pause.unity
     guid: 0f7fe26d3bf88478dab191bb0e89dd68
   - enabled: 1
-    path: Assets/scene/PauseSettings.unity
-    guid: 6421cb1ab3833431f8c1e5fadaf08ef6
+    path: Assets/scene/Difficulty.unity
+    guid: 8694196da4873487a95433253d64d6ae
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000

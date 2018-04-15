@@ -41,13 +41,13 @@ public class CountDown : MonoBehaviour {
         //the if statement is needed to prevent countdown when the pause scene is loaded 'on top' of the game
         if (scene.name == "Easy" || scene.name == "Medium" || scene.name == "Hard")
         {
-            Debug.Log("That's the easy game scene");
             StartCoroutine(WaitOneSecond());
         }
     }
 
     IEnumerator WaitOneSecond()
     {
+        
         text.text = "3";
         yield return new WaitForSeconds(1);
         text.text = "2";
@@ -59,6 +59,7 @@ public class CountDown : MonoBehaviour {
         text.text = "";
         car.GetComponent<FollowMouse>().enabled = true;
         coinSpawner[] coinspawners = coinSpawner.GetComponents<coinSpawner>();
+        Debug.Log("there");
         foreach (coinSpawner cs in coinspawners)
         {
             cs.enabled = true;
@@ -68,5 +69,11 @@ public class CountDown : MonoBehaviour {
         fuelSpawner.GetComponent<coinSpawner>().enabled = true;
         carSpawner.GetComponent<carspawner>().enabled = true;
 
+    }
+
+    void OnDisable()
+    {
+        Debug.Log("OnDisable");
+        SceneManager.sceneLoaded -= StartCountDown;
     }
 }

@@ -24,7 +24,7 @@ public class coinSpawner : MonoBehaviour {
         if (pause == false)
         {
             timer -= Time.deltaTime;
-            if (timer <= 0)
+            if (timer <= 0 && !(coin.tag == "Tyre" && sv.getObstacles() == false))
             {
                 Vector2 coinPos = new Vector2(Random.Range(-6.5f, 6.9f), transform.position.y);
                 Instantiate(coin, coinPos, transform.rotation);

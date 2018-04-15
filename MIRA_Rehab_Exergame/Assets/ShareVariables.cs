@@ -5,6 +5,8 @@ using UnityEngine;
 public class ShareVariables : MonoBehaviour {
     private bool pause = false;
     private bool obstacles = true;
+    public int result = 0;
+    public string difficulty = "";
 
     void Awake()
     {

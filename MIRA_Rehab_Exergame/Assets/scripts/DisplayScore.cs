@@ -19,6 +19,8 @@ public class DisplayScore : MonoBehaviour {
     public void updateScore(int score)
     {
         Text scoreDisplay = displayer.GetComponent<Text>();
+
+        GameObject.FindGameObjectWithTag("SharedVariables").GetComponent<ShareVariables>().result = score;
          
         scoreDisplay.text = "SCORE: " + score;
     }

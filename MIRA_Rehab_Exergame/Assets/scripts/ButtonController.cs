@@ -39,7 +39,6 @@ public class ButtonController : MonoBehaviour {
         SceneManager.LoadScene("Pause", LoadSceneMode.Additive);
         sv.setPause(true);
         GameObject obj = GameObject.FindGameObjectWithTag("PauseButton");
-        Debug.Log("so far so good");
         obj.GetComponent<Image>().enabled = false;
     }
 
@@ -59,17 +58,17 @@ public class ButtonController : MonoBehaviour {
         sv.resetObstacles();
     }
 
-    public void InGameSettings()
+    public void Exit()
     {
-        SceneManager.LoadScene("PauseSettings", LoadSceneMode.Additive);
         SceneManager.UnloadScene("Pause");
-
+        SceneManager.LoadScene("Feedback");
     }
 
-    public void BackToPause()
+    public void Restart()
     {
-        SceneManager.UnloadScene("PauseSettings");
-        SceneManager.LoadScene("Pause", LoadSceneMode.Additive);
+        Destroy(GameObject.FindGameObjectWithTag("SharedVariables"));
+        SceneManager.UnloadScene("Feedback");
+        SceneManager.LoadScene("HomePage");
     }
 }
 

@@ -2,23 +2,14 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/CountDown.cs">
     <Files>
-      <File FileName="Assets/scripts/DisplayScore.cs" Line="1" Column="1" />
-      <File FileName="Assets/scripts/HandleCollision.cs" Line="21" Column="3" />
-      <File FileName="Assets/Boost.cs" Line="56" Column="39" />
-      <File FileName="Assets/scripts/ButtonController.cs" Line="1" Column="1" />
-      <File FileName="Assets/scripts/EnemycarMove.cs" Line="1" Column="1" />
-      <File FileName="Assets/scripts/coinSpawner.cs" Line="29" Column="70" />
-      <File FileName="Assets/scripts/FollowMouse.cs" Line="31" Column="87" />
-      <File FileName="Assets/scripts/Enemydestroyer.cs" Line="18" Column="176" />
-      <File FileName="Assets/CountDown.cs" Line="26" Column="21" />
+      <File FileName="Assets/CountDown.cs" Line="51" Column="42" />
+      <File FileName="Assets/scripts/coinSpawner.cs" Line="16" Column="22" />
+      <File FileName="Assets/SpawnSnowflakes.cs" Line="30" Column="45" />
+      <File FileName="Assets/scripts/RandomScale.cs" Line="12" Column="75" />
+      <File FileName="Assets/scripts/trackmove.cs" Line="21" Column="31" />
+      <File FileName="Assets/DisplayInstructions.cs" Line="1" Column="1" />
+      <File FileName="Assets/scripts/ButtonController.cs" Line="39" Column="63" />
     </Files>
-    <Pads>
-      <Pad Id="MonoDevelop.NUnit.TestPad">
-        <State name="__root__">
-          <Node name="MIRA_Rehab_Exergame" expanded="True" selected="True" />
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

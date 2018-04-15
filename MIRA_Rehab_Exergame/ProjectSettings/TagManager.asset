@@ -25,6 +25,8 @@ TagManager:
   - FuelSpawner
   - SnowflakeSpawner
   - Snowflake
+  - Result
+  - Instructions
   layers:
   - Default
   - TransparentFX

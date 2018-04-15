@@ -15,6 +15,9 @@ public class Boost : MonoBehaviour {
     public float boostSpeed = 12;
     private float oldCoinsDelay;
 
+    private GameObject[] snowflakes;
+    private GameObject[] tyres;
+
     public float boostTime = 3.0f;
 
     void Start () {
@@ -37,6 +40,8 @@ public class Boost : MonoBehaviour {
     void Update () {
         enemies = GameObject.FindGameObjectsWithTag("Enemycar");
         trees = GameObject.FindGameObjectsWithTag("Tree");
+        snowflakes = GameObject.FindGameObjectsWithTag("Snowflake");
+        tyres = GameObject.FindGameObjectsWithTag("Tyre");
 
         //enter boost
     }
@@ -65,6 +70,15 @@ public class Boost : MonoBehaviour {
             if (trees[i] != null)
             {
                 trees[i].GetComponent<EnemycarMove>().speed = boostSpeed;
+            }
+        }
+
+        //delete existing tyres
+        for (int i = 0; i < tyres.Length; i++)
+        {
+            if (tyres[i] != null)
+            {
+                Destroy(tyres[i]);
             }
         }
 
