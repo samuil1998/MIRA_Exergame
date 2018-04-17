@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 97a585bb9ead742c4bc937ace33b0657
+timeCreated: 1521743937
+licenseType: Free
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - audioSource: {instanceID: 0}
+  - clipOne: {fileID: 8300000, guid: 726f56c0a79014adaa381b5cddcd758c, type: 3}
+  - clipTwo: {fileID: 8300000, guid: c4e58926a6fbe4ff8ad75bac6852eee8, type: 3}
+  - clipThree: {fileID: 8300000, guid: ebcc1261f38a94632b5858f581695196, type: 3}
+  - clipne: {fileID: 8300000, guid: 726f56c0a79014adaa381b5cddcd758c, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
