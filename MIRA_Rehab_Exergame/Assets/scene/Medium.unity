@@ -1275,7 +1275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coin: {fileID: 1537397984086456, guid: 371e4ef55d82549b5a80d9ee6b14589a, type: 2}
-  delaytimer: 10
+  delaytimer: 8
 --- !u!1 &1393510870
 GameObject:
   m_ObjectHideFlags: 0
@@ -1574,7 +1574,7 @@ GameObject:
   - component: {fileID: 1995914992}
   - component: {fileID: 1995914991}
   m_Layer: 0
-  m_Name: CoinSound
+  m_Name: Sound
   m_TagString: CoinSound
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

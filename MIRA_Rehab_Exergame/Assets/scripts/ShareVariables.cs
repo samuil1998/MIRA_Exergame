@@ -8,7 +8,8 @@ public class ShareVariables : MonoBehaviour {
     public int result = 0;
     public string difficulty = "";
     private static int dontdest = 0;
-
+    private bool volume = true;
+        
     void Awake()
     {
         //sth like singleton pattern - ensures that there is at all times only one Music object and only one Shared variables object
@@ -58,5 +59,25 @@ public class ShareVariables : MonoBehaviour {
     {
         obstacles = !obstacles;
         //switch to the other state
+    }
+
+    public void switchVolume()
+    {
+        volume = !volume;
+
+        //this is for the background music
+        if (volume == true)
+        {
+            GameObject.FindGameObjectWithTag("Music").GetComponent<AudioSource>().volume = 1.0f;
+        }
+        else
+        {
+            GameObject.FindGameObjectWithTag("Music").GetComponent<AudioSource>().volume = 0.0f;
+        }
+    }
+
+    public bool getVolume()
+    {
+        return volume;
     }
 }

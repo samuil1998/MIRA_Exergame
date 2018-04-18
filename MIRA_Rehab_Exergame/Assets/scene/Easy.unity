@@ -803,7 +803,7 @@ GameObject:
   - component: {fileID: 665815545}
   - component: {fileID: 665815544}
   m_Layer: 0
-  m_Name: CoinSound
+  m_Name: Sound
   m_TagString: CoinSound
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

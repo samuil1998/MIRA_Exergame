@@ -7,12 +7,14 @@ public class TestPlaying : MonoBehaviour {
     public AudioClip bump;
     public AudioClip buzz;
     public AudioClip boostsound;
+    public ShareVariables sv;
 
 
     AudioSource source;
 	// Use this for initialization
 	void Start () {
         source = GetComponent<AudioSource>();
+        sv = GameObject.FindGameObjectWithTag("SharedVariables").GetComponent<ShareVariables>();
 	}
 	
    
@@ -32,21 +34,33 @@ public class TestPlaying : MonoBehaviour {
 
     public void Bing()
     {
-        source.PlayOneShot(bing, 0.7f);
+        if (sv.getVolume() == true)
+        {
+            source.PlayOneShot(bing, 0.7f);
+        }
     }
 
     public void Bump()
     {
-        source.PlayOneShot(bump, 0.7f);
+        if (sv.getVolume() == true)
+        {
+            source.PlayOneShot(bump, 0.7f);
+        }
     }
 
     public void Buzz()
     {
-        source.PlayOneShot(buzz, 0.7f);
+        if (sv.getVolume() == true)
+        {
+            source.PlayOneShot(buzz, 0.7f);
+        }
     }
 
     public void BoostSound()
     {
-        source.PlayOneShot(boostsound, 0.7f);
+        if (sv.getVolume() == true)
+        {
+            source.PlayOneShot(boostsound, 0.7f);
+        }
     }
 }

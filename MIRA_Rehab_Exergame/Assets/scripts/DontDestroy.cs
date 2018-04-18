@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class DontDestroy : MonoBehaviour {
 
-    private static int dontdest = 0;
+    private static int instances = 0;
 
     void Awake()
     {
-        if (dontdest == 0)
+        if (instances == 0)
         {
-            Debug.Log(dontdest);
             DontDestroyOnLoad(gameObject);
-            dontdest++;
+            instances++;
         }
         else
         {

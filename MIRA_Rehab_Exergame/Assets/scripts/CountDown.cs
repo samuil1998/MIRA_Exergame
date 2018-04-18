@@ -16,6 +16,7 @@ public class CountDown : MonoBehaviour {
     private GameObject carSpawner;
     private GameObject tyreSpawner;
     private GameObject fuelSpawner;
+    private ShareVariables sv;
 
     void OnEnable()
     {
@@ -29,6 +30,7 @@ public class CountDown : MonoBehaviour {
         carSpawner = GameObject.FindGameObjectWithTag("CarSpawner");
 
         source = GetComponent<AudioSource>();
+        sv = GameObject.FindGameObjectWithTag("SharedVariables").GetComponent<ShareVariables>();
     }
 	// Use this for initialization
 	void Start () {
@@ -52,19 +54,16 @@ public class CountDown : MonoBehaviour {
     {
         
         text.text = "3";
-        source.PlayOneShot(buzz, 0.7f);
+        if (sv.getVolume()) source.PlayOneShot(buzz, 0.7f);
         yield return new WaitForSeconds(1);
         text.text = "2";
-        source.PlayOneShot(buzz, 0.7f);
-        //GameObject.FindGameObjectWithTag("CoinSound").GetComponent<TestPlaying>().Buzz();
+        if (sv.getVolume()) source.PlayOneShot(buzz, 0.7f);
         yield return new WaitForSeconds(1);
         text.text = "1";
-        source.PlayOneShot(buzz, 0.7f);
-        //GameObject.FindGameObjectWithTag("CoinSound").GetComponent<TestPlaying>().Buzz();
+        if (sv.getVolume()) source.PlayOneShot(buzz, 0.7f);
         yield return new WaitForSeconds(1);
         text.text = "Go!";
-        source.PlayOneShot(buzz, 0.7f);
-        //GameObject.FindGameObjectWithTag("CoinSound").GetComponent<TestPlaying>().Buzz();
+        if (sv.getVolume()) source.PlayOneShot(buzz, 0.7f);
         yield return new WaitForSeconds(1);
         text.text = "";
 

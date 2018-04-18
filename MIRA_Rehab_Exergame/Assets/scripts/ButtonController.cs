@@ -72,5 +72,10 @@ public class ButtonController : MonoBehaviour {
         SceneManager.UnloadScene("Feedback");
         SceneManager.LoadScene("HomePage");
     }
+
+    public void SwitchVolume()
+    {
+        sv.switchVolume();
+    }
 }
 
