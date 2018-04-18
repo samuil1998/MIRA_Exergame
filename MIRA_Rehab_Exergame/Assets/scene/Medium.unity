@@ -1249,7 +1249,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coin: {fileID: 1629117730309326, guid: 2488974d411304143af7fd0894ec4a61, type: 2}
-  delaytimer: 1
+  delaytimer: 0.8
 --- !u!4 &1234591818
 Transform:
   m_ObjectHideFlags: 0
@@ -1595,6 +1595,7 @@ MonoBehaviour:
   bump: {fileID: 8300000, guid: ded8ee47709e3427c999b6ed40c5120f, type: 3}
   buzz: {fileID: 8300000, guid: 0d994254f4e48400892bf8b3b975c79b, type: 3}
   boostsound: {fileID: 8300000, guid: b9d0fd79d8bc9446c90df95988342547, type: 3}
+  sv: {fileID: 0}
 --- !u!82 &1995914992
 AudioSource:
   m_ObjectHideFlags: 0
