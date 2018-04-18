@@ -46,6 +46,8 @@ public class HandleCollision : MonoBehaviour {
 
 			DisplayScore displayer = controller.GetComponent<DisplayScore>();
 			displayer.updateScore(score);
+
+            GameObject.FindGameObjectWithTag("CoinSound").GetComponent<TestPlaying>().Bump();
         } 
         if (col.gameObject.tag == "coin") 
         {
@@ -56,7 +58,7 @@ public class HandleCollision : MonoBehaviour {
             DisplayScore displayer = controller.GetComponent<DisplayScore>();
             displayer.updateScore(score);
 
-
+            GameObject.FindGameObjectWithTag("CoinSound").GetComponent<TestPlaying>().Bing();
 
         }
 
@@ -69,7 +71,7 @@ public class HandleCollision : MonoBehaviour {
 			DisplayScore displayer = controller.GetComponent<DisplayScore>();
 			displayer.updateScore(score);
 
-
+            GameObject.FindGameObjectWithTag("CoinSound").GetComponent<TestPlaying>().Bing();
 
 		}
 
@@ -77,6 +79,9 @@ public class HandleCollision : MonoBehaviour {
         {
             controller.GetComponent<Boost>().ActivateBoost();
             Destroy (col.gameObject);
+
+            GameObject.FindGameObjectWithTag("CoinSound").GetComponent<TestPlaying>().BoostSound();
+
         }
 
         if (col.gameObject.tag == "Tyre") 
@@ -91,10 +96,11 @@ public class HandleCollision : MonoBehaviour {
             {
                 score = 0;
             }
-
-
+                
             DisplayScore displayer = controller.GetComponent<DisplayScore>();
             displayer.updateScore(score);
+
+            GameObject.FindGameObjectWithTag("CoinSound").GetComponent<TestPlaying>().Bump();
         }
 
         //else if (col.gameObject.tag == "Tree") 

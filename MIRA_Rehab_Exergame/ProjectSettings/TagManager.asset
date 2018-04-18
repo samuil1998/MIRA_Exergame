@@ -29,6 +29,8 @@ TagManager:
   - Instructions
   - Options
   - BoostTime
+  - CoinSound
+  - Music
   layers:
   - Default
   - TransparentFX

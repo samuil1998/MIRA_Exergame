@@ -66,7 +66,9 @@ public class ButtonController : MonoBehaviour {
 
     public void Restart()
     {
-        Destroy(GameObject.FindGameObjectWithTag("SharedVariables"));
+        //Destroy(GameObject.FindGameObjectWithTag("SharedVariables"));
+       // Destroy(GameObject.FindGameObjectWithTag("Music"));
+
         SceneManager.UnloadScene("Feedback");
         SceneManager.LoadScene("HomePage");
     }

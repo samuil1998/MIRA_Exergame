@@ -51,11 +51,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Boost.cs" />
-     <Compile Include="Assets\CountDown.cs" />
-     <Compile Include="Assets\Displayer.cs" />
-     <Compile Include="Assets\DisplayInstructions.cs" />
-     <Compile Include="Assets\Opacity.cs" />
      <Compile Include="Assets\scripts\AutoDestroy.cs" />
      <Compile Include="Assets\scripts\ButtonController.cs" />
      <Compile Include="Assets\scripts\carspawner.cs" />
@@ -71,9 +66,16 @@
      <Compile Include="Assets\scripts\trackmove.cs" />
      <Compile Include="Assets\scripts\TreeSpawner.cs" />
      <Compile Include="Assets\scripts\UIManager.cs" />
-     <Compile Include="Assets\SetDifficulty.cs" />
-     <Compile Include="Assets\ShareVariables.cs" />
-     <Compile Include="Assets\SpawnSnowflakes.cs" />
+     <Compile Include="Assets\sprites\Boost.cs" />
+     <Compile Include="Assets\sprites\CountDown.cs" />
+     <Compile Include="Assets\sprites\Displayer.cs" />
+     <Compile Include="Assets\sprites\DisplayInstructions.cs" />
+     <Compile Include="Assets\sprites\DontDestroy.cs" />
+     <Compile Include="Assets\sprites\Opacity.cs" />
+     <Compile Include="Assets\sprites\SetDifficulty.cs" />
+     <Compile Include="Assets\sprites\ShareVariables.cs" />
+     <Compile Include="Assets\sprites\SpawnSnowflakes.cs" />
+     <Compile Include="Assets\TestPlaying.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
