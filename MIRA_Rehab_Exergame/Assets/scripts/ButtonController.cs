@@ -77,5 +77,10 @@ public class ButtonController : MonoBehaviour {
     {
         sv.switchVolume();
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }
 

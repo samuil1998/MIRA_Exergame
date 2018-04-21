@@ -1,26 +1,14 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Boost.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/ButtonController.cs">
     <Files>
-      <File FileName="Assets/scripts/coinSpawner.cs" Line="31" Column="27" />
-      <File FileName="Assets/SpawnSnowflakes.cs" Line="1" Column="1" />
-      <File FileName="Assets/scripts/RandomScale.cs" Line="1" Column="1" />
-      <File FileName="Assets/scripts/trackmove.cs" Line="1" Column="1" />
-      <File FileName="Assets/scripts/ButtonController.cs" Line="67" Column="26" />
-      <File FileName="Assets/SetDifficulty.cs" Line="1" Column="1" />
-      <File FileName="Assets/CountDown.cs" Line="1" Column="1" />
-      <File FileName="Assets/scripts/DisplayScore.cs" Line="12" Column="69" />
-      <File FileName="Assets/scripts/HandleCollision.cs" Line="46" Column="13" />
-      <File FileName="Assets/Boost.cs" Line="1" Column="1" />
-      <File FileName="Assets/Displayer.cs" Line="85" Column="1" />
-      <File FileName="Assets/DisplayInstructions.cs" Line="1" Column="1" />
-      <File FileName="Assets/ShareVariables.cs" Line="1" Column="1" />
-      <File FileName="Assets/scripts/EnemycarMove.cs" Line="1" Column="1" />
-      <File FileName="Assets/scripts/FollowMouse.cs" Line="35" Column="52" />
-      <File FileName="Assets/scripts/carspawner.cs" Line="46" Column="14" />
+      <File FileName="Assets/scripts/ButtonController.cs" Line="87" Column="1" />
+      <File FileName="Assets/TestPlaying.cs" Line="45" Column="27" />
+      <File FileName="Assets/scripts/HandleCollision.cs" Line="1" Column="1" />
       <File FileName="Assets/scripts/Home.cs" Line="1" Column="1" />
-      <File FileName="Assets/scripts/TreeSpawner.cs" Line="1" Column="1" />
-      <File FileName="Assets/scripts/UIManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/scripts/Enemydestroyer.cs" Line="1" Column="1" />
+      <File FileName="Assets/scripts/ShareVariables.cs" Line="1" Column="1" />
+      <File FileName="Assets/scripts/CountDown.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
